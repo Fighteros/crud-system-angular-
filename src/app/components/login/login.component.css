@@ -8,3 +8,6 @@
 /* .login-form > * {
   padding: 12px;
 } */
+.login-form h1 {
+  padding: 12px;
+}
