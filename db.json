@@ -1,9 +1,23 @@
 {
+  "companies": [
+    {
+      "companyId": 1,
+      "companyName" : ""
+    }
+  ],
   "employees": [
     {
       "id":1,
       "username": "admin",
       "password": "admin"
+    },
+    {
+      "id" : 2,
+      "username": "employee1",
+      "firstName": "employee",
+      "lastName": "1",
+      "email":"employee@fakedata.com",
+      "phone": "+2021523156"
     }
   ]
 }

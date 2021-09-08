@@ -1,22 +1,32 @@
-<div class="ui aligned center aligned center grid">
-<div class="login-form ten wide column left aligned">
-      <form class="ui form "  (ngSubmit)="onSubmit()">
-        <h1> Login Form  </h1>
-            <div class="field">
-              <label>Username</label>
-              <input type="text" name="username" [(ngModel)]="username"  placeholder="Username" id="username">
-            </div>
-            <div class="field">
-              <label>Password</label>
-              <input type="password" name="password" [(ngModel)]="password" placeholder="password">
-            </div>
-            <div class="field">
-              <div class="ui checkbox">
-                <input type="checkbox" name="rememberMe" [(ngModel)]="rememberMe" tabindex="0">
-                <label>remember me</label>
-              </div>
-            </div>
-            <button class="fluid ui large secondary button" type="submit">Login</button>
-       </form>
-</div> 
+
+<div *ngIf="!isLoggedIn" class="ui container">
+  <app-home></app-home>
+</div>
+
+
+<div class="ui container">
+  <div class="ui text container">
+    <div *ngIf="isLoggedIn" class="ui aligned center aligned center grid">
+      <div class="login-form ten wide column left aligned">
+            <form class="ui form "  (ngSubmit)="onSubmit()">
+              <h1> Login Form  </h1>
+                  <div class="field">
+                    <label>Username</label>
+                    <input type="text" name="username" [(ngModel)]="username"  placeholder="Username" id="username">
+                  </div>
+                  <div class="field">
+                    <label>Password</label>
+                    <input type="password" name="password" [(ngModel)]="password" placeholder="password">
+                  </div>
+                  <div class="field">
+                    <div class="ui checkbox">
+                      <input type="checkbox" name="rememberMe" [(ngModel)]="rememberMe" tabindex="0">
+                      <label>remember me</label>
+                    </div>
+                  </div>
+                  <button class="fluid ui large secondary button" type="submit">Login</button>
+             </form>
+      </div> 
+      </div>
+  </div>
 </div>
