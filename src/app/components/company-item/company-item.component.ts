@@ -13,11 +13,12 @@ import { Company } from '../../Comapny';
 export class CompanyItemComponent implements OnInit {
 
   @Input() company!: Company;
+  oldCompanyName!: string;
   showEditCompany!: boolean;
   subscription!: Subscription;
   @Output() onEditCompany: EventEmitter<Company> = new EventEmitter();
 
-  constructor(private companyService: CompanyService, private uiService: UiService) {
+  constructor() {
   }
 
   ngOnInit(): void {
@@ -26,12 +27,17 @@ export class CompanyItemComponent implements OnInit {
 
 
   editCompany(): void {
+    this.oldCompanyName = this.company.companyName;
     this.showEditCompany = true;
   }
 
   onSaveCompany(): void {
     this.showEditCompany = false;
     this.onEditCompany.emit(this.company);
+  }
+  onCancel(): void {
+    this.company.companyName = this.oldCompanyName;
+    this.showEditCompany = false;
   }
 
 
