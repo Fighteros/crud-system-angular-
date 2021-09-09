@@ -27,4 +27,10 @@ export class CompanyService {
   addCompany(company: Company): Observable<Company> {
     return this.http.post<Company>(this.apiUrl, company, httpOptions)
   }
+
+
+  editCompany(company: Company): Observable<Company> {
+    const companyUrl = `${this.apiUrl}/${company.id}`
+    return this.http.put<Company>(companyUrl, company, httpOptions)
+  }
 }

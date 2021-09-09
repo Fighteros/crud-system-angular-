@@ -15,12 +15,13 @@ export class CompaniesComponent implements OnInit {
   subscription!: Subscription;
 
   constructor(private companyService: CompanyService, private uiservice: UiService) {
-    this.subscription = this.uiservice.onShowAddCompany().subscribe((value) => (this.showAddCompanyState = value))
+    this.subscription = this.uiservice.onToggleAdd().subscribe((value) => (this.showAddCompanyState = value))
   }
 
   ngOnInit(): void {
     this.companyService.getCompanies().subscribe((companies) => (this.companyList = companies));
   }
+
 
   showAddCompany(): void {
     this.uiservice.toggleShowAddCompany()
@@ -28,6 +29,10 @@ export class CompaniesComponent implements OnInit {
 
   addCompany(company: Company): void {
     this.companyService.addCompany(company).subscribe((company) => (this.companyList.push(company)))
+  }
+
+  editCompany(company: Company) {
+    this.companyService.editCompany(company).subscribe();
   }
 
 }

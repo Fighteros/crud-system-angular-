@@ -1,16 +1,29 @@
 <div class="ui four mb-3 wide column">
     <div class="ui three wide column">
-        <div class="ui one card">
+        <div *ngIf="!showEditCompany" class="ui one card">
             <div class="content">
                 <div class="header">
                     {{company.companyName}}
                 </div>
             </div>
             <div class="extra row content">
-                <button class="ui button success yellow"> Edit Company </button>
-
+                <button (click)="editCompany()" class="ui button success yellow"> Edit Company </button>
                 <button class="ui button danger red"> Delete Company </button>
             </div>
         </div>
+
+        <!-- for the editing  -->
+        <div *ngIf="showEditCompany" class="ui one card">
+            <div class="content">
+                <div class="header">
+                    <input [(ngModel)]="company.companyName" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="extra row content">
+                <button (click)="onSaveCompany()" class="ui button success green"> Save Company </button>
+                <button class="ui button danger red"> Delete Company </button>
+            </div>
+        </div>
+
     </div>
 </div>

@@ -20,9 +20,12 @@ export class AddCompanyComponent implements OnInit {
 
 
   addCompany(): void {
-    const fakeCompanyId = Math.floor(Math.random() * 10000 + 1)
+    // json server now creates id just like the backend so no need
+    // to make a random id 
+
+    // const fakeCompanyId = Math.floor(Math.random() * 10000 + 1)
     const newCompany = {
-      id: fakeCompanyId,
+      // id: fakeCompanyId,
       companyName: this.companyName,
       employees: [],
     }

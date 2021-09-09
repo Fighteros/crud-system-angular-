@@ -9,81 +9,33 @@
   "companies": [
     {
       "id": 1,
-      "companyName": "Office Dan",
-      "employees": [
-        {
-          "id": 1,
-          "username": "mohamedali",
-          "firstName": "Mohamed",
-          "lastName": "Ali",
-          "email": "moahmedali11@fakedata.com",
-          "phone": "+2010558987"
-        },
-        {
-          "id": 2,
-          "username": "sayedemad",
-          "firstName": "Sayed",
-          "lastName": "Emad",
-          "email": "sauyemad@fakedata.com",
-          "phone": "+2010454789"
-        }
-      ]
+      "employees": [],
+      "companyName": "test adding company name"
     },
     {
       "id": 2,
       "companyName": "Coffee Mockal",
-      "employees": [
-        {
-          "id": 1,
-          "username": "ahmedshabaan",
-          "firstName": "Ahmed",
-          "lastName": "Shabaan",
-          "email": "ahmedshabaan@fakedata.com",
-          "phone": "+2015245578"
-        },
-        {
-          "id": 2,
-          "username": "ramygmail",
-          "firstName": "Ramy",
-          "lastName": "Gmail",
-          "email": "ramygmail@fakedata.com",
-          "phone": "+01077889945"
-        }
-      ]
+      "employees": []
     },
     {
       "id": 3,
       "companyName": "Office Dan",
-      "employees": [
-        {
-          "id": 1,
-          "username": "admin",
-          "password": "admin"
-        },
-        {
-          "id": 2,
-          "username": "employee1",
-          "firstName": "employee",
-          "lastName": "1",
-          "email": "employee@fakedata.com",
-          "phone": "+2021523156"
-        }
-      ]
+      "employees": []
     },
     {
+      "id": 4,
       "companyName": "Test Company",
-      "employees": [],
-      "id": 4
+      "employees": []
     },
     {
+      "id": 5,
       "companyName": "another test",
-      "employees": [],
-      "id": 5
+      "employees": []
     },
     {
+      "id": 6,
       "companyName": "another 2 test",
-      "employees": [],
-      "id": 6
+      "employees": []
     },
     {
       "id": 2236,
@@ -104,6 +56,11 @@
       "id": 487,
       "companyName": "testing save company",
       "employees": []
+    },
+    {
+      "companyName": "this is Awesome",
+      "employees": [],
+      "id": 5357
     }
   ]
 }
