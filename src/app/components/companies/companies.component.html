@@ -15,6 +15,7 @@
         </div>
     </div>
 
-    <app-company-item (onEditCompany)="editCompany($event)" *ngFor=" let company of companyList" [company]="company">
+    <app-company-item (onEditCompany)="editCompany($event)" (onDeleteCompany)="deleteCompany($event)"
+        *ngFor=" let company of companyList" [company]="company">
     </app-company-item>
 </div>

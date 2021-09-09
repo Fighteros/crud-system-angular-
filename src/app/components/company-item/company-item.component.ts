@@ -17,6 +17,7 @@ export class CompanyItemComponent implements OnInit {
   showEditCompany!: boolean;
   subscription!: Subscription;
   @Output() onEditCompany: EventEmitter<Company> = new EventEmitter();
+  @Output() onDeleteCompany: EventEmitter<Company> = new EventEmitter();
 
   constructor() {
   }
@@ -31,6 +32,10 @@ export class CompanyItemComponent implements OnInit {
     this.showEditCompany = true;
   }
 
+  deleteCompany(): void {
+    this.onDeleteCompany.emit(this.company);
+  }
+
   onSaveCompany(): void {
     this.showEditCompany = false;
     this.onEditCompany.emit(this.company);
@@ -39,6 +44,5 @@ export class CompanyItemComponent implements OnInit {
     this.company.companyName = this.oldCompanyName;
     this.showEditCompany = false;
   }
-
 
 }

@@ -35,4 +35,12 @@ export class CompaniesComponent implements OnInit {
     this.companyService.editCompany(company).subscribe();
   }
 
+  deleteCompany(company: Company) {
+    this.companyService.deleteCompany(company).subscribe(() => (
+      this.companyList = this.companyList.filter(t => (
+        t.id !== company.id
+      ))
+    ))
+  }
+
 }

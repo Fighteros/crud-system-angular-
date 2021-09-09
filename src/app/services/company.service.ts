@@ -16,6 +16,7 @@ const httpOptions = {
 
 
 export class CompanyService {
+
   private apiUrl = "http://localhost:5000/companies"
   constructor(private http: HttpClient) { }
 
@@ -32,5 +33,10 @@ export class CompanyService {
   editCompany(company: Company): Observable<Company> {
     const companyUrl = `${this.apiUrl}/${company.id}`
     return this.http.put<Company>(companyUrl, company, httpOptions)
+  }
+
+  deleteCompany(company: Company): Observable<Company> {
+    const companyUrl = `${this.apiUrl}/${company.id}`
+    return this.http.delete<Company>(companyUrl)
   }
 }
