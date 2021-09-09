@@ -1,8 +1,9 @@
 <app-header></app-header>
-<app-companies></app-companies>
+<app-companies *ngIf="hasRoute('/')"></app-companies>
+<app-employees *ngIf="hasRoute('/employees')"></app-employees>
 
-<!-- <div class="ui two item menu">
+<!-- <div class=" ui two item menu">
   <a routerLink="companies" class="{{ hasRoute('/companies') ? 'item active' : 'item' }}">Companies</a>
   <a routerLink="employees" class="{{ hasRoute('/employees') ? 'item active' : 'item' }}">employess</a>
-</div> -->
+  </div> -->
 <!-- <app-employees *ngIf="hasRoute('/employees')"></app-employees> -->

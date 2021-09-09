@@ -20,6 +20,11 @@ export class CompanyService {
   private apiUrl = "http://localhost:5000/companies"
   constructor(private http: HttpClient) { }
 
+  getCompany(company: Company): Observable<Company> {
+    const companyUrl = `${this.apiUrl}/${company.id}`
+    return this.http.get<Company>(companyUrl)
+  }
+
   getCompanies(): Observable<Company[]> {
     return this.http.get<Company[]>(this.apiUrl);
   }

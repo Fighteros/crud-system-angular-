@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin"
+    }
+  ],
+  "companies": [
+    {
+      "id": 1,
+      "employees": [],
+      "companyName": "test adding here name"
+    },
+    {
+      "id": 2,
+      "companyName": "Coffee Mockal",
+      "employees": []
+    },
+    {
+      "id": 3,
+      "companyName": "Office Dan",
+      "employees": []
+    },
+    {
+      "id": 4,
+      "companyName": "Test Company",
+      "employees": []
+    },
+    {
+      "id": 5,
+      "companyName": "another test",
+      "employees": []
+    },
+    {
+      "id": 6,
+      "companyName": "another 2 test",
+      "employees": []
+    },
+    {
+      "id": 2236,
+      "companyName": "company form compaines",
+      "employees": []
+    },
+    {
+      "id": 5356,
+      "companyName": "why the are so crawded",
+      "employees": []
+    }
+  ]
+}

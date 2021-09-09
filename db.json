@@ -8,19 +8,46 @@
   ],
   "companies": [
     {
-      "id": 1,
-      "employees": [],
-      "companyName": "test adding here name"
-    },
-    {
       "id": 2,
       "companyName": "Coffee Mockal",
-      "employees": []
+      "employees": [
+        {
+          "id": 1,
+          "name": "Moustapha Mohamed",
+          "email": "moustapha11@fakedata.json.server"
+        },
+        {
+          "id": 2,
+          "name": "Ali Mohamed",
+          "email": "Ali@fakedata.json.server"
+        },
+        {
+          "id": 3,
+          "name": "Mohamed Aymen",
+          "email": "Mohamed Aymen@fakedata.json.server"
+        }
+      ]
     },
     {
       "id": 3,
       "companyName": "Office Dan",
-      "employees": []
+      "employees": [
+        {
+          "id": 1,
+          "name": "Moustapha Mohamed",
+          "email": "moustapha11@fakedata.json.server"
+        },
+        {
+          "id": 2,
+          "name": "Ali Mohamed",
+          "email": "Ali@fakedata.json.server"
+        },
+        {
+          "id": 3,
+          "name": "Mohamed Aymen",
+          "email": "Mohamed Aymen@fakedata.json.server"
+        }
+      ]
     },
     {
       "id": 4,
@@ -28,24 +55,34 @@
       "employees": []
     },
     {
-      "id": 5,
-      "companyName": "another test",
-      "employees": []
+      "companyName": "zeek's",
+      "employees": [],
+      "id": 5
     },
     {
-      "id": 6,
-      "companyName": "another 2 test",
-      "employees": []
+      "companyName": "i'm testing",
+      "employees": [],
+      "id": 6
     },
     {
-      "id": 2236,
-      "companyName": "company form compaines",
-      "employees": []
+      "companyName": "this is company",
+      "employees": [],
+      "id": 7
     },
     {
-      "id": 5356,
-      "companyName": "why the are so crawded",
-      "employees": []
+      "companyName": "add one more company",
+      "employees": [],
+      "id": 8
+    },
+    {
+      "companyName": "one more",
+      "employees": [],
+      "id": 9
+    },
+    {
+      "companyName": "one more",
+      "employees": [],
+      "id": 10
     }
   ]
 }

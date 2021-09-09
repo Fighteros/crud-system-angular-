@@ -1,7 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { CompanyService } from 'src/app/services/company.service';
-import { UiService } from 'src/app/services/ui.service';
 import { Company } from '../../Comapny';
 
 

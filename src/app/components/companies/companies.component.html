@@ -1,11 +1,12 @@
 <div class="ui aligned center aligned center pt-5 grid">
     <div class="row text-center pb-4">
         <div class="col">
-            <h2>Companies</h2>
+            <h1>{{ !showAddCompanyState? 'Companies' : 'Add Company' }}</h1>
         </div>
         <div class="col">
-            <button (click)="showAddCompany()" class="ui justfiy-right success button green">
-                Add Company
+            <button (click)="showAddCompany()"
+                class="{{ !showAddCompanyState? 'ui justfiy-right success button green' : 'ui justfiy-right danger button red' }}">
+                {{ !showAddCompanyState? 'Add Company': 'Cancel' }}
             </button>
         </div>
     </div>
