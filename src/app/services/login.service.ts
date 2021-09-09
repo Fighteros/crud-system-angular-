@@ -17,15 +17,15 @@ const httpOptions = {
 export class LoginService {
 
   isLoggedIn = false;
-  private apiUrl = "http://localhost:5000/employees"
+  private apiUrl = "http://localhost:5000/users/"
   constructor(private http: HttpClient) { }
 
-  getUser(user: User) : Observable<User>{
+  getUser(user: User): Observable<User> {
     const url = `${this.apiUrl}/${user.id}`
-    return this.http.get<User>(url); 
+    return this.http.get<User>(url);
   }
 
-  loginSuccess(state : boolean){
+  loginSuccess(state: boolean) {
     this.isLoggedIn = state;
   }
 

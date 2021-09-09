@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 // import * as faker from 'faker'
 import { Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,7 +15,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  hasRoute(route: string){
+  hasRoute(route: string) {
     return this.router.url === route;
   }
 

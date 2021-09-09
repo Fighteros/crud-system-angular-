@@ -1,0 +1,24 @@
+<!-- <p>add-company works!</p>-->
+
+<form>
+    <div class="mb-3">
+        <label for="company-name">
+            <h3 class=" mb-3">Company Name</h3>
+        </label>
+        <input class="form-control" type="text" name="company-name" [(ngModel)]="companyName" id="company-name"
+            placeholder="company name" />
+    </div>
+    <div class="mb-3">
+        <label for="company-employees">
+        </label>
+        <!-- @todo here should be input for company employess  -->
+
+        <a routerLink="/employees" class="btn m-3 btn-secondary" type="submit">
+            Add employee
+        </a>
+
+        <button class="btn btn-primary">
+            add company
+        </button>
+    </div>
+</form>

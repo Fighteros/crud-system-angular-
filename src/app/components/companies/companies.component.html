@@ -1,1 +1,19 @@
-<p>Compaines is working!</p>
+<div class="ui aligned center aligned center pt-5 grid">
+    <div class="row text-center pb-4">
+        <div class="col">
+            <h2>Companies</h2>
+        </div>
+        <div class="col">
+            <button (click)="showAddCompany()" class="ui justfiy-right success button green">
+                Add Company
+            </button>
+        </div>
+    </div>
+    <div *ngIf="showAddCompanyState" class="row">
+        <div class="col-4 text-center">
+            <app-add-company></app-add-company>
+        </div>
+    </div>
+    <app-company-item *ngFor=" let company of companyList" [company]="company">
+    </app-company-item>
+</div>

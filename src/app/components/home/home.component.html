@@ -1,11 +1,8 @@
 <app-header></app-header>
-<div class="ui two item menu">
+<app-companies></app-companies>
+
+<!-- <div class="ui two item menu">
   <a routerLink="companies" class="{{ hasRoute('/companies') ? 'item active' : 'item' }}">Companies</a>
   <a routerLink="employees" class="{{ hasRoute('/employees') ? 'item active' : 'item' }}">employess</a>
-</div>
-<div class="ui one column grid">
-  <div class="column text-center">
-    <app-companies *ngIf="hasRoute('/companies')"></app-companies>
-    <app-employees *ngIf="hasRoute('/employees')"></app-employees>
-  </div>
-</div>
+</div> -->
+<!-- <app-employees *ngIf="hasRoute('/employees')"></app-employees> -->

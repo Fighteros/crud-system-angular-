@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { Company } from '../../Comapny';
+import { CompanyService } from 'src/app/services/company.service';
+import { UiService } from 'src/app/services/ui.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-companies',
@@ -6,10 +10,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./companies.component.css']
 })
 export class CompaniesComponent implements OnInit {
+  companyList: Company[] = [];
+  showAddCompanyState!: boolean;
+  subscription!: Subscription;
 
-  constructor() { }
+  constructor(private companyService: CompanyService, private uiservice: UiService) {
+    this.subscription = this.uiservice.onShowAddCompany().subscribe((value) => (this.showAddCompanyState = value))
+  }
 
   ngOnInit(): void {
+    this.companyService.getCompanies().subscribe((companies) => (this.companyList = companies));
+  }
+
+  showAddCompany(): void {
+    this.uiservice.toggleShowAddCompany()
   }
 
 }

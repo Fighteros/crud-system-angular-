@@ -10,10 +10,12 @@ import { EmployeesComponent } from './components/employees/employees.component';
 import { CompaniesComponent } from './components/companies/companies.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { CompanyItemComponent } from './components/company-item/company-item.component';
+import { AddCompanyComponent } from './components/add-company/add-company.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'companies', component: CompaniesComponent },
+  // { path: 'companies', component: CompaniesComponent },
   { path: 'employees', component: EmployeesComponent },
   // {path: '', component: }
 ];
@@ -25,7 +27,9 @@ const appRoutes: Routes = [
     EmployeesComponent,
     CompaniesComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    CompanyItemComponent,
+    AddCompanyComponent
   ],
   imports: [
     BrowserModule,

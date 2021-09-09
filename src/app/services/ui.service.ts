@@ -6,19 +6,17 @@ import { Observable, Subject } from 'rxjs';
 })
 
 export class UiService {
-  private showHeader : boolean = false;
+  showAddCompany: boolean = false;
   private subject = new Subject<any>();
   constructor() { }
 
-  headerShown(): void {
-    this.showHeader = true;
+  toggleShowAddCompany(): void {
+    this.showAddCompany = !this.showAddCompany;
+    this.subject.next(this.showAddCompany)
   }
 
-  headerHidden(): void {
-    this.showHeader = false;
-  }
 
-  onHeaderChange() : Observable<any> {
+  onShowAddCompany(): Observable<any> {
     return this.subject.asObservable()
   }
 }
