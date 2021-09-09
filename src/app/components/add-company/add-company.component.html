@@ -1,6 +1,6 @@
 <!-- <p>add-company works!</p>-->
 
-<form>
+<form (ngSubmit)="addCompany()">
     <div class="mb-3">
         <label for="company-name">
             <h3 class=" mb-3">Company Name</h3>
@@ -17,8 +17,6 @@
             Add employee
         </a>
 
-        <button class="btn btn-primary">
-            add company
-        </button>
+        <input type="submit" value="Save Company" class="btn btn-block btn-primary">
     </div>
 </form>

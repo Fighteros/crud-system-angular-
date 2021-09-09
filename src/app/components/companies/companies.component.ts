@@ -26,4 +26,8 @@ export class CompaniesComponent implements OnInit {
     this.uiservice.toggleShowAddCompany()
   }
 
+  addCompany(company: Company): void {
+    this.companyService.addCompany(company).subscribe((company) => (this.companyList.push(company)))
+  }
+
 }

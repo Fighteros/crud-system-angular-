@@ -11,9 +11,10 @@
     </div>
     <div *ngIf="showAddCompanyState" class="row">
         <div class="col-4 text-center">
-            <app-add-company></app-add-company>
+            <app-add-company (onAddCompany)="addCompany($event)"></app-add-company>
         </div>
     </div>
+
     <app-company-item *ngFor=" let company of companyList" [company]="company">
     </app-company-item>
 </div>
