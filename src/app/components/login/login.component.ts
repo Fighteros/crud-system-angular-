@@ -11,25 +11,27 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   username!: string;
-  password! : string;
+  password!: string;
   rememberMe: boolean = false;
-  isLoggedIn! : boolean;
+  isLoggedIn!: boolean;
   isUsernameValid?: boolean;
-  constructor(private loginService: LoginService,private route: Router) { 
+  constructor(private loginService: LoginService, private route: Router) {
   }
 
   ngOnInit(): void {
+    this.loginService.loggedIn.subscribe(v => this.isLoggedIn = v)
+
   }
 
   // dummy validation
   onSubmit() {
-    if(!this.username && !this.password){
+    if (!this.username && !this.password) {
       Swal.fire('Not Vaild', 'username and password must not be empty', 'error')
     }
-    else if(!this.username){
+    else if (!this.username) {
       Swal.fire('Not Vaild', 'username must not be empty', 'error')
     }
-    else if(!this.password){
+    else if (!this.password) {
       Swal.fire('Not Vaild', 'password must not be empty', 'error')
     }
     else {
@@ -45,14 +47,16 @@ export class LoginComponent implements OnInit {
 
   // can be designed in much easier way 
   // but i wanted to use angular services
-  login(user: User){
+  login(user: User) {
     this.loginService.getUser(user).subscribe((u) => {
-      if(u.password === user.password){
-        this.loginService.loginSuccess(true)
-        this.isLoggedIn = this.loginService.getState();
+      if (u.password === user.password) {
+        this.loginService.login()
+
+        // this.loginService.loginSuccess(true)
+        // this.isLoggedIn = this.loginService.getState();
         return Swal.fire({
           title: 'logined Sucessfully',
-          icon: 'success', 
+          icon: 'success',
         })
       }
       else return Swal.fire('Credentials aren\'t correct', 'sorry, try again ', 'error')

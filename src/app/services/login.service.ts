@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs'
+import { BehaviorSubject, Observable } from 'rxjs'
 import { User } from '../User'
 
 
@@ -15,9 +15,9 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class LoginService {
-
+  loggedIn = new BehaviorSubject<boolean>(localStorage.getItem("isLoggedIn") === "true");
   isLoggedIn = false;
-  private apiUrl = "http://localhost:5000/users/"
+  private apiUrl = "http://localhost:5000/users"
   constructor(private http: HttpClient) { }
 
   getUser(user: User): Observable<User> {
@@ -32,5 +32,18 @@ export class LoginService {
   getState(): boolean {
     return this.isLoggedIn;
   }
+
+  login() {
+    localStorage.setItem("isLoggedIn", "true");
+    localStorage.setItem("token", "fghdfghdfghdfghdfghdfghdfgh");
+    this.loggedIn.next(true);
+    // if (user.userName === "admin" && user.password === "admin") {
+    //    localStorage.setItem("isLoggedIn", "true");
+    //    localStorage.setItem("token", "add some unique token here");
+    //    this.loggedIn.next(true);
+    //    this.router.navigate(["/home"]);
+    // }
+  }
+
 
 }
