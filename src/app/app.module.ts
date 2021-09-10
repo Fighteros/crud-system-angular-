@@ -21,6 +21,7 @@ import { CompanyItemComponent } from './components/company-item/company-item.com
 import { AddCompanyComponent } from './components/add-company/add-company.component';
 import { EmployeeItemComponent } from './components/employee-item/employee-item.component';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
     CompanyItemComponent,
     AddCompanyComponent,
     EmployeeItemComponent,
-    DialogComponent
+    DialogComponent,
+    AddEmployeeComponent
   ],
   imports: [
     BrowserModule,

@@ -12,11 +12,6 @@
       "companyName": "Coffee Mockal",
       "employees": [
         {
-          "id": 2,
-          "username": "Ali Mohamed",
-          "email": "Ali@fakedata.json.server"
-        },
-        {
           "id": 3,
           "username": "Mohamed Aymen",
           "email": "Mohamed Aymen@fakedata.json.server"
@@ -70,18 +65,37 @@
           "id": 1,
           "username": "Moustapha ",
           "email": "moustapha11@fakedata.json.server"
+        },
+        {
+          "id": 2,
+          "username": "Ali Mohamed",
+          "email": "Ali@fakedata.json.server"
+        },
+        {
+          "username": "test"
+        },
+        {
+          "username": "sdfsdfsdf"
         }
       ]
     },
     {
       "id": 5,
-      "employees": [],
-      "companyName": "any shiity name"
+      "employees": [
+        {
+          "username": "sdfsdfsdfsdfs"
+        }
+      ],
+      "companyName": "any Company name"
     },
     {
       "id": 6,
       "companyName": "i'm testing",
-      "employees": []
+      "employees": [
+        {
+          "username": "sdfsdfsdfsdfs"
+        }
+      ]
     }
   ]
 }

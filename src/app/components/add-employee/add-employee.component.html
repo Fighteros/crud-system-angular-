@@ -1,0 +1,26 @@
+<div class="ui middle aligned selection list">
+    <div class="item">
+        <div class="content">
+            <div class="header">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-7">
+                        <input [(ngModel)]="username" class="form-control" placeholder="username" type="text"
+                            name="username" id="username" />
+                    </div>
+                    <div class="col-2">
+                        <!-- <fa-icon [ngStyle]="{'color': 'orange' }" [icon]="faEdit">
+                        </fa-icon> -->
+                        <fa-icon (click)="onSave()" [ngStyle]="{'color': 'green'}" [icon]="faCheck"></fa-icon>
+                    </div>
+                    <div class="col-2">
+                        <!-- <fa-icon [ngStyle]="{'color': 'red' }" [icon]="faTimes">
+                        </fa-icon> -->
+                        <fa-icon (click)="onCancel()" [ngStyle]="{'color': 'grey' }" [icon]="faArrowLeft">
+                        </fa-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

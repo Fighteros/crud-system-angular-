@@ -4,7 +4,14 @@
             <div *ngIf="!showEditCompany" class="ui one card">
                 <div class="content">
                     <div class="header">
-                        {{company.companyName}}
+                        <div class="row">
+                            <div class="col-6">
+                                {{company.companyName}}
+                            </div>
+                            <div class="col-6">
+                                <button (click)="onClickAddUser()" class="btn btn-success"> add employee </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="extra employees">
@@ -12,6 +19,13 @@
                     <app-employees [company]="company"></app-employees>
                     <!-- end employees -->
                 </div>
+
+                <!-- for adding employee -->
+                <app-add-employee *ngIf="showAddEmployee" (onSaveButton)="clickedSaveEmployee($event)"
+                    [company]="company" (onCancelButton)="clickedCancelAdd($event)">
+                </app-add-employee>
+
+
                 <div class="extra row content">
                     <button (click)="editCompany()" class="ui button success yellow"> Edit Company </button>
                     <button (click)="deleteCompany()" class="ui button danger red"> Delete Company </button>

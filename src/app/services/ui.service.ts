@@ -7,6 +7,7 @@ import { Observable, Subject } from 'rxjs';
 
 export class UiService {
   showAddCompany: boolean = false;
+  showAddEmployee: boolean = false;
   // showEditCompanyState: { [id: number]: boolean } = {};
   private subjectOne = new Subject<any>();
   private subjectTwo = new Subject<any>();
@@ -31,7 +32,12 @@ export class UiService {
   //   this.subjectTwo.next(this.showEditCompanyState)
   // }
 
-  onToggleEdit(): Observable<any> {
+  toggleShowAddEmployee(): void {
+    this.showAddEmployee = !this.showAddEmployee;
+    this.subjectTwo.next(this.showAddEmployee)
+  }
+
+  onToggleAddEmployee(): Observable<any> {
     return this.subjectTwo.asObservable()
   }
 
