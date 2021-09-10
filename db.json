@@ -17,11 +17,6 @@
           "email": "Ali@fakedata.json.server"
         },
         {
-          "id": 6,
-          "username": "Mohamed Aymen",
-          "email": "Mohamed Aymen@fakedata.json.server"
-        },
-        {
           "id": 7,
           "username": "Moustapha Mohamed",
           "email": "moustapha11@fakedata.json.server"
@@ -81,33 +76,18 @@
     },
     {
       "id": 5,
+      "companyName": "any Company name",
       "employees": [
         {
-          "username": "sdfsdfsdfsdfs"
-        },
-        {
-          "username": "another user"
-        },
-        {
-          "username": "this all data"
+          "id": 4172,
+          "username": "weried"
         }
-      ],
-      "companyName": "any Company name"
+      ]
     },
     {
       "id": 6,
       "companyName": "i'm testing",
-      "employees": [
-        {
-          "username": "sdfsdfsdfsdfs"
-        },
-        {
-          "username": "another user"
-        },
-        {
-          "username": "so far so on"
-        }
-      ]
+      "employees": []
     }
   ]
 }

@@ -28,8 +28,10 @@ export class AddEmployeeComponent implements OnInit {
   }
 
   onSave(): void {
+    const randomId = Math.floor(Math.random() * 10000 + 1)
     const newUser = {
-      "username": this.username,
+      id: randomId,
+      username: this.username,
     }
     this.company.employees.push(newUser);
     this.onSaveButton.emit(this.company)
