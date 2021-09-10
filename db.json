@@ -13,46 +13,65 @@
       "employees": [
         {
           "id": 1,
-          "name": "Moustapha Mohamed",
+          "username": "Moustapha Mohamed",
           "email": "moustapha11@fakedata.json.server"
         },
         {
           "id": 2,
-          "name": "Ali Mohamed",
+          "username": "Ali Mohamed",
           "email": "Ali@fakedata.json.server"
         },
         {
           "id": 3,
-          "name": "Mohamed Aymen",
+          "username": "Mohamed Aymen",
           "email": "Mohamed Aymen@fakedata.json.server"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "companyName": "Office Dan",
-      "employees": [
+        },
         {
           "id": 1,
-          "name": "Moustapha Mohamed",
+          "username": "Moustapha Mohamed",
           "email": "moustapha11@fakedata.json.server"
         },
         {
           "id": 2,
-          "name": "Ali Mohamed",
+          "username": "Ali Mohamed",
           "email": "Ali@fakedata.json.server"
         },
         {
           "id": 3,
-          "name": "Mohamed Aymen",
+          "username": "Mohamed Aymen",
+          "email": "Mohamed Aymen@fakedata.json.server"
+        },
+        {
+          "id": 1,
+          "username": "Moustapha Mohamed",
+          "email": "moustapha11@fakedata.json.server"
+        },
+        {
+          "id": 2,
+          "username": "Ali Mohamed",
+          "email": "Ali@fakedata.json.server"
+        },
+        {
+          "id": 3,
+          "username": "Mohamed Aymen",
+          "email": "Mohamed Aymen@fakedata.json.server"
+        },
+        {
+          "id": 1,
+          "username": "Moustapha Mohamed",
+          "email": "moustapha11@fakedata.json.server"
+        },
+        {
+          "id": 2,
+          "username": "Ali Mohamed",
+          "email": "Ali@fakedata.json.server"
+        },
+        {
+          "id": 3,
+          "username": "Mohamed Aymen",
           "email": "Mohamed Aymen@fakedata.json.server"
         }
       ]
-    },
-    {
-      "id": 4,
-      "companyName": "Test Company",
-      "employees": []
     },
     {
       "companyName": "zeek's",
@@ -63,26 +82,6 @@
       "companyName": "i'm testing",
       "employees": [],
       "id": 6
-    },
-    {
-      "companyName": "this is company",
-      "employees": [],
-      "id": 7
-    },
-    {
-      "companyName": "add one more company",
-      "employees": [],
-      "id": 8
-    },
-    {
-      "companyName": "one more",
-      "employees": [],
-      "id": 9
-    },
-    {
-      "companyName": "one more",
-      "employees": [],
-      "id": 10
     }
   ]
 }
