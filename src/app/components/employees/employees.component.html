@@ -3,10 +3,10 @@
 
 <!--  bug fixed -->
 
-<app-employee-item *ngFor="let user of userList | slice:0:5; let i=index" [user]="user">
+<app-employee-item *ngFor="let user of userList " [user]="user">
 </app-employee-item>
-<hr>
+<!-- <hr> -->
 
-<a (click)="openDialog()" class="btn btn-secondar"> show all employees </a>
+<!-- <a (click)="openDialog()" class="btn btn-secondar"> show all employees </a> -->
 
 <!-- // @todo show all employees for only one company -->

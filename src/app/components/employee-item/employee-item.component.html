@@ -4,7 +4,9 @@
             <div class="header">
                 <div class="row">
                     <div class="col-8">
-                        {{ user.username }}
+                        <div *ngIf="!opened">{{ user.username }} </div>
+                        <input *ngIf="opened" class="form-control" type="text" name="username" id="username"
+                            [(ngModel)]="user.username" />
                     </div>
                     <div class="col-2">
                         <fa-icon *ngIf="!opened" (click)="userEdit(user)" [ngStyle]="{'color': 'orange'}"

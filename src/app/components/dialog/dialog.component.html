@@ -7,6 +7,24 @@
 
 <div mat-dialog-content>
     <div *ngFor="let item of data" class="ui middle aligned selection list">
+        <!-- <div class="row">
+            <div class="col-8">
+                <div *ngIf="!opened">{{ item.username }} </div>
+                <input *ngIf="opened" class="form-control" type="text" name="username" id="username"
+                    [(ngModel)]="item.username" />
+            </div>
+            <div class="col-2">
+                <fa-icon *ngIf="!opened" (click)="userEdit(item)" [ngStyle]="{'color': 'orange'}" [icon]="faEdit">
+                </fa-icon>
+                <fa-icon *ngIf="opened" (click)="saveEdit(item)" [ngStyle]="{'color': 'green'}" [icon]="faCheck">
+                </fa-icon>
+            </div>
+            <div class="col-2">
+                <fa-icon *ngIf="!opened" [ngStyle]="{'color': 'red' }" [icon]="faTimes"></fa-icon>
+                <fa-icon *ngIf="opened" [ngStyle]="{'color': 'grey' }" [icon]="faArrowLeft"></fa-icon>
+            </div>
+        </div> -->
+
         <div class="item">
             <div class="content">
                 <div class="header">{{ item.username }}</div>
