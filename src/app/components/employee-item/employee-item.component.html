@@ -15,7 +15,8 @@
                             [icon]="faCheck"></fa-icon>
                     </div>
                     <div class="col-2">
-                        <fa-icon *ngIf="!opened" [ngStyle]="{'color': 'red' }" [icon]="faTimes"></fa-icon>
+                        <fa-icon (click)="userDelete()" *ngIf="!opened" [ngStyle]="{'color': 'red' }" [icon]="faTimes">
+                        </fa-icon>
                         <fa-icon *ngIf="opened" [ngStyle]="{'color': 'grey' }" [icon]="faArrowLeft"></fa-icon>
                     </div>
                 </div>

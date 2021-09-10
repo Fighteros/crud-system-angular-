@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Company } from 'src/app/Comapny';
 import { User } from 'src/app/User';
 import { DialogService } from 'src/app/services/dialog.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-employees',
@@ -13,7 +14,7 @@ export class EmployeesComponent implements OnInit {
 
   @Input() company!: Company;
   userList!: User[];
-  constructor(private router: Router, private dialog: DialogService) { }
+  constructor(private userService: UserService, private dialog: DialogService) { }
 
   ngOnInit(): void {
     // no need to fetch from the server from 
@@ -23,15 +24,23 @@ export class EmployeesComponent implements OnInit {
     this.userList = this.company.employees
   }
 
-
+  deleteUser(user: User) {
+    const newUserList = this.userList.filter(u => (u.id !== user.id))
+    const newCompany = {
+      id: this.company.id,
+      companyName: this.company.companyName,
+      employees: newUserList
+    }
+    this.userService.deleteUser(this.company.id!, newCompany).subscribe(() => (this.userList = this.userList.filter(u => (u.id !== user.id))))
+  }
   // check the route and return value based on my requirement
   // hasRoute(route: string) {
   //   return this.router.url === route;
   // }
 
-  openDialog() {
-    this.dialog.showUsers(this.userList)
-  }
+  // openDialog() {
+  //   this.dialog.showUsers(this.userList)
+  // }
 
 
 

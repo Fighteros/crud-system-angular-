@@ -29,7 +29,12 @@ export class EmployeeItemComponent implements OnInit {
   }
 
   saveEdit(user: User) {
+    this.onEditUser.emit(user)
     this.opened = false;
+  }
+
+  userDelete(): void {
+    this.onDeleteUser.emit(this.user);
   }
 
 }
