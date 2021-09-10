@@ -96,6 +96,15 @@
           "username": "sdfsdfsdfsdfs"
         }
       ]
+    },
+    {
+      "companyName": "any shit",
+      "employees": [
+        {
+          "username": "empty"
+        }
+      ],
+      "id": 7
     }
   ]
 }

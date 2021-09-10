@@ -1,4 +1,4 @@
-<div *ngIf="!isLoggedIn">
+<div *ngIf="isLoggedIn">
   <app-home></app-home>
 </div>
 
@@ -6,7 +6,7 @@
 <!-- non-authenticated -->
 <div class="ui container">
   <div class="ui text container">
-    <div *ngIf="isLoggedIn" class="ui aligned center aligned center grid">
+    <div *ngIf="!isLoggedIn" class="ui aligned center aligned center grid">
       <div class="login-form ten wide column left aligned">
         <form class="ui form " (ngSubmit)="onSubmit()">
           <h1> Login Form </h1>
