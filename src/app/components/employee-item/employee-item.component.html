@@ -17,7 +17,8 @@
                     <div class="col-2">
                         <fa-icon (click)="userDelete()" *ngIf="!opened" [ngStyle]="{'color': 'red' }" [icon]="faTimes">
                         </fa-icon>
-                        <fa-icon *ngIf="opened" [ngStyle]="{'color': 'grey' }" [icon]="faArrowLeft"></fa-icon>
+                        <fa-icon (click)="onCancel()" *ngIf="opened" [ngStyle]="{'color': 'grey' }"
+                            [icon]="faArrowLeft"></fa-icon>
                     </div>
                 </div>
             </div>

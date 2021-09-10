@@ -33,6 +33,21 @@ export class EmployeesComponent implements OnInit {
     }
     this.userService.deleteUser(this.company.id!, newCompany).subscribe(() => (this.userList = this.userList.filter(u => (u.id !== user.id))))
   }
+
+
+  editUser(user: User) {
+    const newUserList = this.userList.filter(u => (u.id !== user.id))
+    newUserList.push(user)
+    const newCompany = {
+      id: this.company.id,
+      companyName: this.company.companyName,
+      employees: newUserList,
+    }
+    this.userService.updateUser(this.company.id!, newCompany).subscribe()
+  }
+
+
+
   // check the route and return value based on my requirement
   // hasRoute(route: string) {
   //   return this.router.url === route;

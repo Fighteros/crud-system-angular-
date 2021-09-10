@@ -22,4 +22,9 @@ export class UserService {
     const url = `${this.apiUrl}/${id}`
     return this.http.put<Company>(url, company, httpOptions)
   }
+
+  updateUser(id: number, company: Company): Observable<Company> {
+    const url = `${this.apiUrl}/${id}`
+    return this.http.put<Company>(url, company, httpOptions)
+  }
 }

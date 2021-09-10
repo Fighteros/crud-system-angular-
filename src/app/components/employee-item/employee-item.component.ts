@@ -9,6 +9,7 @@ import { faTimes, faEdit, faArrowLeft, faCheck } from '@fortawesome/free-solid-s
 })
 export class EmployeeItemComponent implements OnInit {
   @Input() user!: User;
+  oldUserName!: string;
   faTimes = faTimes;
   faEdit = faEdit;
   faArrowLeft = faArrowLeft;
@@ -25,16 +26,22 @@ export class EmployeeItemComponent implements OnInit {
   }
 
   userEdit(user: User) {
+    this.oldUserName = user.username;
     this.opened = true;
   }
 
   saveEdit(user: User) {
-    this.onEditUser.emit(user)
     this.opened = false;
+    this.onEditUser.emit(user)
   }
 
   userDelete(): void {
     this.onDeleteUser.emit(this.user);
+  }
+
+  onCancel(): void {
+    this.user.username = this.oldUserName
+    this.opened = false;
   }
 
 }

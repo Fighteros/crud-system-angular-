@@ -3,7 +3,8 @@
 
 <!--  bug fixed -->
 
-<app-employee-item *ngFor="let user of userList " [user]="user" (onDeleteUser)="deleteUser($event)">
+<app-employee-item *ngFor="let user of userList " [user]="user" (onEditUser)="editUser($event)"
+    (onDeleteUser)="deleteUser($event)">
 </app-employee-item>
 <!-- <hr> -->
 
