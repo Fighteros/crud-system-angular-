@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -24,7 +25,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
   // { path: 'companies', component: CompaniesComponent },
-  { path: 'employees', component: EmployeesComponent },
+  // { path: 'employees', component: EmployeesComponent },
   // {path: '', component: }
 ];
 
@@ -51,7 +52,8 @@ const appRoutes: Routes = [
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
