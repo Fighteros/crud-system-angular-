@@ -9,7 +9,9 @@
                                 {{company.companyName}}
                             </div>
                             <div class="col-6">
-                                <button (click)="onClickAddUser()" class="btn btn-success"> add employee </button>
+                                <button (click)="onClickAddUser()"
+                                    class="{{!showAddEmployee? 'btn btn-success' : 'btn btn-danger red'}}"> {{
+                                    !showAddEmployee? 'add employee': 'cancel'}} </button>
                             </div>
                         </div>
                     </div>

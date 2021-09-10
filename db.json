@@ -12,16 +12,6 @@
       "companyName": "Coffee Mockal",
       "employees": [
         {
-          "id": 3,
-          "username": "Mohamed Aymen",
-          "email": "Mohamed Aymen@fakedata.json.server"
-        },
-        {
-          "id": 4,
-          "username": "Moustapha Mohamed",
-          "email": "moustapha11@fakedata.json.server"
-        },
-        {
           "id": 5,
           "username": "Ali Mohamed",
           "email": "Ali@fakedata.json.server"
@@ -76,6 +66,16 @@
         },
         {
           "username": "sdfsdfsdf"
+        },
+        {
+          "id": 3,
+          "username": "Mohamed ",
+          "email": "Mohamed Aymen@fakedata.json.server"
+        },
+        {
+          "id": 4,
+          "username": " Mohamed",
+          "email": "moustapha11@fakedata.json.server"
         }
       ]
     },
@@ -84,6 +84,12 @@
       "employees": [
         {
           "username": "sdfsdfsdfsdfs"
+        },
+        {
+          "username": "another user"
+        },
+        {
+          "username": "this all data"
         }
       ],
       "companyName": "any Company name"
@@ -94,17 +100,14 @@
       "employees": [
         {
           "username": "sdfsdfsdfsdfs"
+        },
+        {
+          "username": "another user"
+        },
+        {
+          "username": "so far so on"
         }
       ]
-    },
-    {
-      "companyName": "any shit",
-      "employees": [
-        {
-          "username": "empty"
-        }
-      ],
-      "id": 7
     }
   ]
 }
